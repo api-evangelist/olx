@@ -1,0 +1,36 @@
+generated: '2026-07-20'
+method: searched
+source: https://developer.olx.pl/api/doc
+api: OLX Poland Partner API
+base_url: https://www.olx.pl/api/partner/
+authentication:
+  style: oauth2-bearer
+  header: 'Authorization: Bearer <access_token>'
+  authorization_url: https://www.olx.pl/oauth/authorize/
+  token_url: https://www.olx.pl/api/open/oauth/token
+  token_format: JWT (migrating from ~40-char opaque tokens to JWT up to 4096 chars)
+  ref: authentication/olx-authentication.yml
+versioning:
+  scheme: unknown
+  note: >-
+    OLX documents an evolving surface; token format migration announced. No
+    explicit URI/header API-version scheme was confirmed from the public docs.
+resources:
+  note: >-
+    Public endpoint surface documented at developer.olx.pl/api/doc (Poland).
+    Delivery endpoints are Poland-only at time of capture.
+  endpoints:
+  - {method: GET, path: "/partner/adverts", summary: List adverts}
+  - {method: POST, path: "/partner/adverts", summary: Create an advert}
+  - {method: PUT, path: "/partner/adverts/{advertId}", summary: Update an advert}
+  - {method: GET, path: "/partner/categories/{categoryId}/attributes", summary: List category attributes}
+  - {method: GET, path: "/partner/delivery/settings", summary: Read delivery settings (Poland only)}
+idempotency:
+  supported: unknown
+  note: No documented idempotency-key contract confirmed from public docs.
+pagination:
+  style: unknown
+  note: Not confirmed from public docs.
+cross_links:
+  authentication: authentication/olx-authentication.yml
+  security: security/olx-vulnerability-disclosure.yml

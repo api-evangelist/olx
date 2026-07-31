@@ -1,8 +1,12 @@
 aid: olx
 name: OLX
-description: 'OLX is a company surfaced as a portfolio company of bessemer-venture-partners, general-catalyst
-  and added to the API Evangelist network as a stub for enrichment. Sector: consumer. This profile is
-  a lead awaiting the enrichment pipeline.'
+description: 'OLX is a global online classifieds and marketplace operator, part of OLX Group (owned by
+  Prosus / Naspers), running consumer buy-and-sell marketplaces across 30+ countries under 20+ brands
+  including OLX Poland (olx.pl), OLX Brazil (olx.com.br), OLX Portugal, OLX Bulgaria and OLX Romania,
+  spanning general classifieds, motors/autos, and real estate. OLX Poland publishes a public Partner
+  API (OAuth2) that lets integrators and sellers manage adverts, categories/attributes, and delivery
+  settings programmatically. Surfaced as a portfolio company of Bessemer Venture Partners and General
+  Catalyst and enriched into the API Evangelist network.'
 url: https://raw.githubusercontent.com/api-evangelist/olx/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -11,18 +15,81 @@ x-backed-by:
 - general-catalyst
 x-tier: stub
 x-tier-reason: portfolio-lead
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-20'
 tags:
 - Company
 - Consumer
-apis: []
+- Marketplace
+- Classifieds
+- Ecommerce
+- Automotive
+- Real Estate
+- Partner API
+image: https://www.olx.pl/app/static/media/olx-logo.svg
+apis:
+- name: OLX Poland Partner API
+  description: 'OAuth2 partner API for OLX Poland (olx.pl) that lets integrators manage classified
+    adverts (list, create, update), read category attributes, and read delivery settings. Bearer-token
+    authenticated; OLX announced migration of access tokens to JWT (up to 4096 chars).'
+  humanURL: https://developer.olx.pl/api/doc
+  baseURL: https://www.olx.pl/api/partner/
+  tags:
+  - Classifieds
+  - Adverts
+  - Marketplace
+  properties:
+  - type: Documentation
+    url: https://developer.olx.pl/api/doc
+  - type: Authentication
+    url: authentication/olx-authentication.yml
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+x-enrichment:
+  date: '2026-07-20'
+  status: enriched
+  artifacts_added: 8
+  pass: local-v1
 common:
 - type: Website
   url: https://www.olx.com/
+- type: DeveloperPortal
+  url: https://developer.olx.pl/
+- type: Documentation
+  url: https://developer.olx.pl/api/doc
+- type: APIReference
+  url: https://developer.olx.pl/api/doc
+- type: Authentication
+  url: authentication/olx-authentication.yml
+- type: SecurityTxt
+  url: well-known/olx-security.txt
+- type: WellKnown
+  url: well-known/olx-well-known.yml
+- type: VulnerabilityDisclosure
+  url: security/olx-vulnerability-disclosure.yml
+- type: Security
+  url: https://www.olx.com.br/.well-known/security.txt
+- type: DomainSecurity
+  url: security/olx-domain-security.yml
+- type: Conventions
+  url: conventions/olx-conventions.yml
+- type: MCPServer
+  url: mcp/olx-mcp.yml
+- type: LLMsTxt
+  url: llms/olx-llms.txt

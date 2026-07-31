@@ -1,0 +1,26 @@
+generated: '2026-07-20'
+method: searched
+source: live probes of OLX host /.well-known/ paths
+hosts:
+- host: https://www.olx.com.br
+  documents:
+  - path: /.well-known/security.txt
+    status: 200
+    file: olx-security.txt
+- host: https://www.olx.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 403
+  - path: /.well-known/openid-configuration
+    status: 403
+- host: https://www.olx.pl
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 301
+    note: redirects to a generic error page, not a real OIDC discovery document
+- host: https://developer.olx.pl
+  documents:
+  - path: /.well-known/security.txt
+    status: 404

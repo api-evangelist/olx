@@ -1,0 +1,23 @@
+generated: '2026-07-20'
+method: searched
+source: https://developer.olx.pl/api/doc
+docs: https://developer.olx.pl/api/doc
+summary:
+  types: [oauth2]
+  token_type: bearer
+  note: >-
+    OLX Poland Partner API uses OAuth2. Access tokens are presented as Bearer
+    tokens in the Authorization header. OLX announced a migration of access
+    tokens from short (~40 character) opaque tokens to JWT access tokens
+    (up to 4096 characters, typically <=1024).
+schemes:
+- name: OAuth2
+  type: oauth2
+  scheme: bearer
+  authorizationUrl: https://www.olx.pl/oauth/authorize/
+  tokenUrl: https://www.olx.pl/api/open/oauth/token
+  bearerFormat: JWT
+  evidence:
+  - {endpoint: https://www.olx.pl/oauth/authorize/, status: 301, note: redirects to OLX account login (authorize)}
+  - {endpoint: https://www.olx.pl/api/open/oauth/token, status: 405, note: token endpoint, rejects GET (POST expected)}
+  sources: [https://developer.olx.pl/api/doc]

@@ -1,0 +1,27 @@
+generated: '2026-07-20'
+method: derived
+status: candidate
+source: >-
+  Derived from the publicly documented OLX Poland Partner API operations at
+  https://developer.olx.pl/api/doc . No official OLX-hosted MCP server was found.
+server:
+  name: olx-partner
+  transport: http
+  url: null
+  note: candidate tool list only; OLX does not publish an official MCP server
+tools:
+- name: list_adverts
+  description: List the seller's classified adverts
+  source_operation: GET https://www.olx.pl/api/partner/adverts
+- name: create_advert
+  description: Create a new classified advert
+  source_operation: POST https://www.olx.pl/api/partner/adverts
+- name: update_advert
+  description: Update an existing advert by id
+  source_operation: PUT https://www.olx.pl/api/partner/adverts/{advertId}
+- name: list_category_attributes
+  description: List the attributes available for a category
+  source_operation: GET https://www.olx.pl/api/partner/categories/{categoryId}/attributes
+- name: get_delivery_settings
+  description: Read OLX Delivery settings (Poland only)
+  source_operation: GET https://www.olx.pl/api/partner/delivery/settings

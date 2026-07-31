@@ -1,0 +1,5 @@
+Canonical: https://olx.com.br/.well-kown/security.txt
+Canonical: httos://olx.com.br/security.txt
+Contact: mailto:csirt-team@olxbr.com
+Contact: mailto:infosec@olxbr.com
+Expires: 2030-10-10T00:00:00Z

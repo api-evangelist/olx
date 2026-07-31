@@ -1,0 +1,21 @@
+# OLX
+
+> OLX is a global online classifieds and marketplace operator, part of OLX Group (Prosus / Naspers), running consumer buy-and-sell marketplaces across 30+ countries under 20+ brands. OLX Poland publishes a public OAuth2 Partner API for managing adverts, category attributes, and delivery settings.
+
+## APIs
+
+- [OLX Poland Partner API — docs](https://developer.olx.pl/api/doc): OAuth2 partner API to list/create/update classified adverts, read category attributes, and read delivery settings. Base URL https://www.olx.pl/api/partner/
+
+## Developer
+
+- [OLX Poland Developer Portal](https://developer.olx.pl/): Register an application, obtain OAuth2 credentials, and read the API documentation.
+- [Authorization endpoint](https://www.olx.pl/oauth/authorize/): OAuth2 authorize.
+- [Token endpoint](https://www.olx.pl/api/open/oauth/token): OAuth2 token (Bearer/JWT access tokens).
+
+## Security
+
+- [security.txt (OLX Brazil)](https://www.olx.com.br/.well-known/security.txt): Security contacts csirt-team@olxbr.com and infosec@olxbr.com.
+
+## Company
+
+- [OLX Group](https://www.olx.com/): Network of leading classifieds marketplaces in 30+ countries under 20+ brands.
