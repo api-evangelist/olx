@@ -1,9 +1,8 @@
 generated: '2026-07-20'
 method: derived
 status: candidate
-source: >-
-  Derived from the publicly documented OLX Poland Partner API operations at
-  https://developer.olx.pl/api/doc . No official OLX-hosted MCP server was found.
+source: Derived from the publicly documented OLX Poland Partner API operations at https://developer.olx.pl/api/doc
+  . No official OLX-hosted MCP server was found.
 server:
   name: olx-partner
   transport: http
@@ -25,3 +24,9 @@ tools:
 - name: get_delivery_settings
   description: Read OLX Delivery settings (Poland only)
   source_operation: GET https://www.olx.pl/api/partner/delivery/settings
+deployment:
+  mode: none
+  verified: derived
+  tools: 5
+  checked: '2026-08-12'
+  source: catalog MCP census
