@@ -48,7 +48,7 @@ tags:
 - Classifieds
 - E-Commerce
 - Automotive
-- Real-Estate
+- Real Estate
 - Partner API
 tags_raw:
 - Company
@@ -59,6 +59,7 @@ tags_raw:
 - Automotive
 - Real Estate
 - Partner API
+- Real-Estate
 image: https://www.olx.pl/app/static/media/olx-logo.svg
 apis:
 - name: OLX Poland Partner API
